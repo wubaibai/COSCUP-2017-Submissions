@@ -1,8 +1,22 @@
 body {
 	margin: 0 0 0 0;
-	background-color: #000000;
+	background-color: #1a1a1a;
 	font-size: 1em;
 	color: #ffffff;
+	padding-top: 60px;
+}
+
+#summary-block {
+	background: #9a8277;
+	color: #DDD;
+	padding: 20px;
+	line-height: 1.2;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	box-sizing: border-box;
 }
 
 a:link , a:visited {
@@ -67,87 +81,13 @@ a:link , a:visited {
 	border-width: 1px; border-style:solid;
 	font-size: 0.8em;
 	overflow: hidden;
+	position: relative;
 }
 
-.class_community_0 {	/*  */
+.class_sub:hover {
+	background-color: #9a8277;
 }
 
-.class_community_1 {	/* Workflaws and Workflows in Hacking, Hackers 的盲腸與日常 */
-}
-
-.class_community_2 {	/* Open Source Farm Innovation 農業 x 科技 x 開源 */
-}
-
-.class_community_3 {	/* Open Source Database */
-  background-color: #5294cf;
-}
-
-.class_community_4 {	/* Rust */
-  background-color: #231f20;
-}
-
-.class_community_5 {	/* Desktop Software 桌面應用軟體 */
-}
-
-.class_community_6 {	/* Open Web Technologies */
-}
-
-.class_community_7 {	/* Android 大亂鬥 */
-  background-color: #a4ca39;
-}
-
-.class_community_8 {	/* Open Document Format 開放文件格式 */
-}
-
-.class_community_9 {	/* Chinese 中文 */
-}
-
-.class_community_10{	/* The Art of Conducting Open Community 開放社群經營藝術 */
-}
-
-.class_community_11{	/* WordPress 網站開發大小事 */
-  background-color: #00a0d2;
-}
-
-.class_community_12{	/* Linux Kernel & System & Coders */
-}
-
-.class_community_13{	/* Emacs (intro "Emacs") */
-  background-color: #6f6cb5;
-}
-
-.class_community_14{	/* Ethereum (Blockchain) */
-  background-color: #102026;
-}
-
-.class_community_15{	/* openSUSE */
-  background-color: #73ba25;
-}
-
-.class_community_16{	/* Kaggle 101 - Data Science On-The-Go */
-  background-color: #20beff;
-}
-
-.class_community_17{	/* OpenStreetMap 開放街圖 */
-  background-color: #7ebc6f;
-}
-
-.class_community_18{	/* OpenStack / Virtualization */
-  background-color: #ed1844;
-}
-
-.class_community_19{	/* "Go Go Power Ranger" 大夥兒一起來 Golang */
-  background-color: #69d7e2;
-}
-
-.class_community_20{	/* Ubuntu Core & Snappy */
-  background-color: #dd4814;
-}
-
-.class_community_21{	/* DevOps Workshop */
-	background-color: #4f67a0;
-}
-
-.class_community_22{	/* Angular Workshop */
-  background-color: #e23237;
+.class_selected {
+	background: #18A303;
 }

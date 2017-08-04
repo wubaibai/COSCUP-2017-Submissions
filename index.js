@@ -14,8 +14,20 @@
 	這部分為底下的Javascript 產生
 	
 =================================*/
+
+var selectedRef = [
+	3, 4,
+	46, 47, 48, 49, 50,
+	87, 51, 66, 91,
+	53, 56, 58,
+	14, 69,
+	137, 138, 139,
+	98, 99, 100, 101, 102
+];
+
+var summarys = new Object();
+
 $(function(){
-	
 	var room_submission = new Object(); //因原始格式不好排資料，所以需要重排過
 	var day_start = 8 * 60; //定義一天的開始從早上8點算
 	var url = 'https://coscup.org/2017-assets/json/submissions.json'; //coscup 2017 議程官方資料來源
@@ -95,6 +107,8 @@ $(function(){
 													'time_end':time_end
 												});
 			console.log(index_community+'   '+d['community']);
+
+			summarys[v] = d['summary'];
 		});
 		
 		$.each( room_submission , function (v_day , d_room){
@@ -138,6 +152,8 @@ $(function(){
 			});
 			$('body').append('<br>');
 		});
+
+		customizeJS();
 		
 		renew_time_now_bar();
 	});
@@ -145,6 +161,20 @@ $(function(){
 		resize_room_area();
 	});
 });
+
+function customizeJS() {
+	$.each(selectedRef, function(index, ref){
+		$('.class_sub[ref="'+ref+'"]').addClass('class_selected');
+	});
+
+	$('.class_sub').hover(function(){
+		var thisRef = parseInt($(this).attr('ref'));
+		$('#summary-block').html(thisRef +'<br/>' +summarys[thisRef]);
+	}, function(){
+		$('#summary-block').html('');
+	});
+}
+
 function resize_room_area(){
 	var w=$(window).width(); //取得顯示的空間寬
 	w-=$('.class_times').width(); //減掉時間軸的寬度
